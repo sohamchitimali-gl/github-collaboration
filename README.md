@@ -780,6 +780,31 @@ CORS_ORIGINS=http://localhost:5173,http://localhost:3000
 VITE_API_BASE_URL=http://127.0.0.1:8000/api/v1
 ```
 
+### Troubleshooting
+
+If `npm install` fails:
+
+1. Check that Node.js 18+ and npm are installed:
+
+   ```
+   node --version
+   npm --version
+   ```
+
+2. If the dependencies are corrupted, remove `node_modules` and reinstall:
+
+   ```
+   rm -rf node_modules
+   npm install
+   ```
+
+3. If the error mentions a specific package, check the npm error message and make sure the package is compatible with your Node.js version.
+
+4. Avoid using `sudo npm install`. If you get a permission error, fix the Node.js/npm installation instead.
+
+5. If the problem persists, check the npm error message for the specific package or dependency that failed before making changes to `package-lock.json`.
+
+
 ---
 
 ## Running the App
